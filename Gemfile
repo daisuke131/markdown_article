@@ -13,8 +13,8 @@ gem "jquery-rails"
 # font-awesome
 gem "font-awesome-sass"
 # ログイン機能
-gem 'devise'
-gem 'devise-i18n'
+gem "devise"
+gem "devise-i18n"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.2.3"
@@ -54,13 +54,13 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "factory_bot_rails"
   gem "faker"
+  gem "letter_opener"
+  gem "letter_opener_web"
   gem "onkcop", require: true
   gem "pry-byebug"
   gem "pry-doc"
   gem "pry-rails"
   gem "rspec-rails"
-  gem 'letter_opener'
-  gem 'letter_opener_web'
 end
 
 group :development do
