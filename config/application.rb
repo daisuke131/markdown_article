@@ -1,6 +1,6 @@
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -21,13 +21,13 @@ module Qoota
       g.stylesheets false
       g.helper false
       g.test_framework :rspec,
-      fixtures: true,
-      fixture_replacement: :factory_bot,
-      view_specs: false,
-      routing_specs: false,
-      helper_specs: false,
-      controller_specs: false,
-      request_specs: true
+                       fixtures: true,
+                       fixture_replacement: :factory_bot,
+                       view_specs: false,
+                       routing_specs: false,
+                       helper_specs: false,
+                       controller_specs: false,
+                       request_specs: true
     end
     # config.api_only = true
     # config.middleware.use ActionDispatch::Flash
