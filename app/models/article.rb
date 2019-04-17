@@ -6,5 +6,5 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :body, presence: true
-  enum status: { draft: 0, published: 1, secret: 2 }
+  enum status: ["published", "secret", "draft"]
 end
