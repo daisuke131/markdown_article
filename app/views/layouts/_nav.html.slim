@@ -1,0 +1,28 @@
+nav.navbar.navbar-expand-lg.navbar-light.px-0
+  = link_to "qoota", root_path, class:"navbar-brand text-white"
+  button.navbar-toggler type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"     aria-expanded="false" aria-label="Toggle navigation"
+    span.navbar-toggler-icon
+  .collapse.navbar-collapse#navbarSupportedContent
+    ul.navbar-nav.mr-auto
+      - if user_signed_in?
+        li.nav-item
+          = link_to current_user.username, user_path(current_user), class:"nav-link"
+        li.nav-item
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-link"
+      - else
+        li.nav-item
+          = link_to "新規登録", new_user_registration_path, class:"nav-link"
+        li.nav-item
+          = link_to "ログイン", new_user_session_path, class:"nav-link"
+    / form.form-inline.my-2.my-lg-0
+    /   input.form-control.mr-sm-2 type="search" placeholder="Search" aria-label="Search"
+    /   button.btn.btn-outline-success.my-2.my-sm-0 type="submit" = "Search"
+    ul.navbar-nav
+      - if user_signed_in?
+        li = link_to new_article_path, class: "btn btn-success" do
+          = icon('fas', 'pen-nib', class: "pr-2")
+          span = "投稿"
+
+    / form.form-inline
+    /   input.form-control type="search" placeholder="Search" aria-label="Search"
+    /   button.btn.btn-outline-success type="submit" = "Search"

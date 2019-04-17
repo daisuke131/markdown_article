@@ -8,4 +8,7 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    header style="background: #1DA1F2;"
+      .container
+        = render "layouts/nav"
     = yield
