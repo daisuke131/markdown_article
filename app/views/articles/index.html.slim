@@ -1,2 +1,12 @@
-h1 Articles#index
-p Find me in app/views/articles/index.html.slim
+.container.py-3.py-sm-5
+  - @articles.each do |article|
+    .border-bottom.p-3
+      .article-user
+        = "投稿者："
+        = link_to article.username, user_path(article.user_id), class: "pr-3"
+        = icon("far", "thumbs-up", class: "pr-2")
+        span.pr-3 = article.like_count
+      .article-title = link_to article.title, article_path(article)
+      .article-body = article.body
+      .d-flex.justify-content-end
+        = article.created_at.strftime("%Y-%m-%d %H:%M")
