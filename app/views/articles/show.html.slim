@@ -1,0 +1,7 @@
+.bg-light
+  .container.py-3.py-sm-5
+    .bg-white
+      - if @article.user_id == current_user.id
+        = link_to "編集", edit_article_path(@article)
+      p = @article.title
+      = qiita_markdown(@article.body).html_safe
