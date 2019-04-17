@@ -1,0 +1,19 @@
+.container {
+  max-width: 900px !important;
+}
+.article-user {
+  font-size: 14px;
+}
+
+.article-title{
+  font-size: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-body {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
