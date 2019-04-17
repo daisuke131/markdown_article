@@ -15,6 +15,7 @@ gem "font-awesome-sass"
 # ログイン機能
 gem "devise"
 gem "devise-i18n"
+gem "rails-i18n"
 # markdown
 gem "github-linguist"
 gem "qiita-markdown"
