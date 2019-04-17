@@ -15,6 +15,9 @@ gem "font-awesome-sass"
 # ログイン機能
 gem "devise"
 gem "devise-i18n"
+# markdown
+gem "github-linguist"
+gem "qiita-markdown"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.2.3"
