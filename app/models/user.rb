@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :like_articles, through: :likes, source: :articles
   has_many :communities, through: :user_communities
-  validates :username, presence: true, length: { maximum: 10}
+  # validates :username, presence: true, length: { maximum: 10 }
 end
