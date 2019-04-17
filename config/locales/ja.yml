@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      article: "記事"
+    attributes:
+      article:
+        title: "タイトル"
+        body: "内容"
+      article/status:
+        draft: "下書き"
+        published: "公開"
+        secret: "限定公開"
