@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new,:edit, :create, :update, :delete]
   before_action :set_article, only: [:update, :destroy]
 
   def index
@@ -7,13 +7,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article =
-      if current_user.id == params[:id]
-
-        current_user.articles.left_joins(:user).select("articles.*, users.username").find(params[:id])
-      else
-        Article.published.left_joins(:user).select("articles.*, users.username").find(params[:id])
-      end
+    @article = Article.published.left_joins(:user).select("articles.*, users.id as user_id, users.username").find(params[:id])
   end
 
   def new

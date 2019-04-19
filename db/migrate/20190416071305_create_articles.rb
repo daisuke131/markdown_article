@@ -4,7 +4,6 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :body
       t.integer :status, default: 0
-      t.integer :like_count, default: 0
       t.references :user, foreign_key: true
 
       t.timestamps

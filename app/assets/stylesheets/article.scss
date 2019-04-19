@@ -1,6 +1,8 @@
 .container {
   max-width: 900px !important;
 }
+
+// index
 .article-user {
   font-size: 14px;
 }
@@ -16,4 +18,16 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.article-date {
+  font-size: 14px;
+}
+
+// show
+h1.show-title {
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #7db4e6;
 }
