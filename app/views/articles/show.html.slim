@@ -1,11 +1,10 @@
-.bg-light
-  .container.py-3.py-sm-5
-    .bg-white
-      .d-flex.justify-content-end
-        .mr-auto.p-2 = "#{@article.username}が投稿"
-        - if user_signed_in?
-          - if @article.user_id == current_user.id
-            .p-2 = link_to "編集", edit_article_path(@article)
-            .p-2 = link_to "削除", article_path(@article), method: :delete
-      h1.show-title.mb-3 = @article.title
-      = qiita_markdown(@article.body).html_safe
+.container.py-3.py-sm-5
+  .bg-white
+    .d-flex.justify-content-end
+      .mr-auto.p-2 = "#{@article.username}が投稿"
+      - if user_signed_in?
+        - if @article.user_id == current_user.id
+          .p-2 = link_to "編集", edit_article_path(@article)
+          .p-2 = link_to "削除", article_path(@article), method: :delete, data: {confirm: "本当に削除しますか？"}
+    h1.show-title.mb-3 = @article.title
+    = qiita_markdown(@article.body).html_safe
