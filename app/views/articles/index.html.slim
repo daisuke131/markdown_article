@@ -2,8 +2,7 @@
   - @articles.each do |article|
     .border-bottom.p-3
       .article-user
-        = "投稿者："
-        = link_to article.username, user_path(article.user_id), class: "pr-3"
+        = "投稿者：#{article.username}"
       .article-title = link_to article.title, article_path(article)
       .article-body = article.body
       .d-flex.justify-content-end

@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, only: [:new,:edit, :create, :update, :delete]
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :delete]
   before_action :set_article, only: [:update, :destroy]
 
   def index
@@ -28,8 +28,9 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
-  def delete
+  def destroy
     @article.destroy!
+    redirect_to root_path
   end
 
   private
