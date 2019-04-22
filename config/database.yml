@@ -54,10 +54,6 @@ test:
 #
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  # <<: *default
-  # database: markdown_article_production
-  # username: markdown_article
-  # password: <%= ENV['MARKDOWN_ARTICLE_DATABASE_PASSWORD'] %>
+  database: markdown_article_production
+  username: markdown_article
+  password: <%= ENV['MARKDOWN_ARTICLE_DATABASE_PASSWORD'] %>
