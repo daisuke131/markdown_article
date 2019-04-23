@@ -14,6 +14,9 @@ nav.navbar.navbar-expand-lg.navbar-light.px-0
           = link_to "新規登録", new_user_registration_path, class:"nav-link"
         li.nav-item
           = link_to "ログイン", new_user_session_path, class:"nav-link"
+      li.nav-link.text-white = "テストアカウント"
+      li.nav-link.text-white = "email: aaa@aaa"
+      li.nav-link.text-white = "pass: aaaaaa"
     ul.navbar-nav
       - if user_signed_in?
         li = link_to new_article_path, class: "btn btn-success" do
