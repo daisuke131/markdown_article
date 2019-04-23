@@ -3,7 +3,7 @@
     = "タイトル："
     = f.text_field :title
   = "内容："
-  .field = f.text_area :body, rows: "20", class: "w-100"
+  .field = f.text_area :body, rows: "18", class: "w-100"
   .d-flex.justify-content-end.py-3
     .field = f.submit "投稿", class: "btn btn-primary"
     .field = f.select :status, [["公開", "published"], ["限定公開", "secret"], ["下書き", "draft"]], {}, {:class => "form-control"}
